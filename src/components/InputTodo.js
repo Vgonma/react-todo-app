@@ -3,38 +3,39 @@ import React, { Component } from 'react';
 
 class InputTodo extends Component {
   state = {
-    title: ''
+    title: '',
   };
 
   onChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
     });
-  }
+  };
 
   handleSubmit = (e) => {
     e.preventDefault();
-    if (this.state.title.trim()){
+    if (this.state.title.trim()) {
       this.props.addTodoProps(this.state.title);
       this.setState({
-        title:'',
-      })
+        title: '',
+      });
     } else {
       alert('Please write a valid item');
     }
-  }
+  };
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className='form-container'>
         <input
-          name="title"
-          type="text"
-          placeholder="Add Todo..."
+          type='text'
+          className='input-text'
+          placeholder='Add todo...'
           value={this.state.title}
-          onChange={this.onChange} 
+          name='title'
+          onChange={this.onChange}
         />
-        <button type='submit'>Submit</button>
+        <button className='input-submit'>Submit</button>
       </form>
     );
   }
