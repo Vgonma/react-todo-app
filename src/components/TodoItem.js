@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 import styles from './TodoItem.module.css';
+import { FaTrash } from 'react-icons/fa';
 
 class TodoItem extends React.Component {
   state = {
@@ -13,11 +14,11 @@ class TodoItem extends React.Component {
     });
   };
 
-  handleUpdatedDone = event => {
-    if (event.key === "Enter") {
-      this.setState({ editing: false })
+  handleUpdatedDone = (event) => {
+    if (event.key === 'Enter') {
+      this.setState({ editing: false });
     }
-  }
+  };
 
   render() {
     const completedStyle = {
@@ -44,7 +45,9 @@ class TodoItem extends React.Component {
             checked={completed}
             onChange={() => this.props.handleChangeProps(id)}
           />
-          <button onClick={() => this.props.deleteTodoProps(id)}>Delete</button>
+          <button onClick={() => this.props.deleteTodoProps(id)}>
+            <FaTrash />
+          </button>{' '}
           <span style={completed ? completedStyle : null}>{title}</span>
         </div>
         <input

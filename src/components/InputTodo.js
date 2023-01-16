@@ -1,5 +1,6 @@
 /* eslint-disable */
 import React, { Component } from 'react';
+import { FaPlusCircle } from 'react-icons/fa';
 
 class InputTodo extends Component {
   state = {
@@ -35,7 +36,11 @@ class InputTodo extends Component {
           name='title'
           onChange={this.onChange}
         />
-        <button className='input-submit'>Submit</button>
+        <button className='input-submit'>
+          <FaPlusCircle
+            style={{ color: 'darkcyan', fontSize: '20px', marginTop: '2px' }}
+          />
+        </button>
       </form>
     );
   }
