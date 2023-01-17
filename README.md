@@ -19,7 +19,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [react todo app] <a name="about-project"></a>
 
 **[react todo app]** is a practice app following a tutorial to review React functionalities.
 
