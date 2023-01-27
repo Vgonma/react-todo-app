@@ -91,12 +91,12 @@ class TodoContainer extends React.Component {
   render() {
     return (
       <>
-        <Navbar />
+        {/* <Navbar />
         <Routes>
           <Route path='/'/>
           <Route path='about' element={<About />} />
           <Route path='*' element={<NotMatch />} />
-        </Routes>
+        </Routes> */}
         <div className='container'>
           <div className='inner'>
             <Header />
