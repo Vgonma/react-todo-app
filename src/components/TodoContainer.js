@@ -93,8 +93,8 @@ class TodoContainer extends React.Component {
       <>
         <Navbar />
         <Routes>
-          <Route exact path='/' />
-          <Route path='/about' element={<About />} />
+          <Route path='/'/>
+          <Route path='about' element={<About />} />
           <Route path='*' element={<NotMatch />} />
         </Routes>
         <div className='container'>
